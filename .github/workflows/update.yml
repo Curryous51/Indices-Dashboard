@@ -1,0 +1,35 @@
+name: Update Dashboard Daily
+
+on:
+  schedule:
+    - cron: "30 18 * * 1-5"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install yfinance pandas
+
+      - name: Run update script
+        run: python update_dashboard.py
+
+      - name: Commit and push if anything changed
+        run: |
+          git config user.name "dashboard-bot"
+          git config user.email "actions@github.com"
+          git add index.html data/dashboard_data.json data/ticker_cache.json needs_review.csv 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "Daily data refresh"
+          git push
