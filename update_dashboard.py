@@ -152,25 +152,54 @@ def main():
     print(f"Downloading price history for {len(tickers)} tickers...")
     raw = yf.download(tickers, period="5y", group_by="ticker", auto_adjust=True, threads=True)
 
-    # Step 3: compute returns per company
-    output_rows = []
+    # Step 3: compute returns per company, grouped by sector so we can also
+    # build a weighted sector-summary row (IsIndex: true) ahead of each group,
+    # matching the schema index.html expects.
+    from collections import OrderedDict
+    by_sector = OrderedDict()
     for c in companies:
-        symbol = resolved.get(c["name"])
-        row = {
-            "Category": c["sector"],
-            "Company": c["name"],
-            "Link": c["link"],
-            "Weight": c.get("weight"),
+        by_sector.setdefault(c["sector"], []).append(c)
+
+    output_rows = []
+    for sector, members in by_sector.items():
+        sector_rows = []
+        for c in members:
+            symbol = resolved.get(c["name"])
+            row = {
+                "Category": c["sector"],
+                "Company": c["name"],
+                "Link": c["link"],
+                "IsIndex": False,
+                "Weight": c.get("weight"),
+            }
+            returns = {}
+            if symbol:
+                try:
+                    closes = raw[symbol]["Close"].dropna()
+                    returns = compute_returns(closes)
+                except Exception as e:
+                    print(f"  skipping {c['name']} ({symbol}): {e}")
+            for label in list(TRADING_DAYS.keys()) + ["LTP VS 52W HIGH"]:
+                row[label] = returns.get(label)
+            sector_rows.append(row)
+
+        # weighted sector summary row (weight-normalized average of each
+        # column across the companies that had a value for it)
+        summary = {
+            "Category": sector, "Company": sector, "Link": None,
+            "IsIndex": True, "Weight": None,
         }
-        returns = {}
-        if symbol:
-            try:
-                closes = raw[symbol]["Close"].dropna()
-                returns = compute_returns(closes)
-            except Exception as e:
-                print(f"  skipping {c['name']} ({symbol}): {e}")
-        row.update(returns)
-        output_rows.append(row)
+        for label in list(TRADING_DAYS.keys()) + ["LTP VS 52W HIGH"]:
+            num, den = 0.0, 0.0
+            for c, r in zip(members, sector_rows):
+                v, w = r.get(label), c.get("weight") or 0
+                if v is not None and w:
+                    num += v * w
+                    den += w
+            summary[label] = round(num / den, 4) if den else None
+
+        output_rows.append(summary)
+        output_rows.extend(sector_rows)
 
     with open(OUTPUT_JSON_PATH, "w", encoding="utf-8") as f:
         json.dump(output_rows, f)
