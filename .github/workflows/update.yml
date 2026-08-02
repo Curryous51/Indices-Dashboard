@@ -32,4 +32,5 @@ jobs:
           git config user.email "actions@github.com"
           git add index.html data/dashboard_data.json data/ticker_cache.json needs_review.csv 2>/dev/null || true
           git diff --staged --quiet || git commit -m "Daily data refresh"
+          git pull --rebase origin main
           git push
