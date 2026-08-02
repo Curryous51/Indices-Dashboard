@@ -1,15 +1,125 @@
 Company,NSE_Symbol
-Oracle Finl. Service,OFSS
-Adani Ports &Special,ADANIPORTS
-SpiceJet,SPICEJET
-Dixon Tech. (India),DIXON
-ICICI Lombard Gen.,ICICIGI
-General Ins. Corpn.,GICRE
-Solar Industries Ind,SOLARINDS
-Motilal Oswal Fin,MOTILALOFS
-Nippon LifeInd.Asset,NAM-INDIA
-Prudent Corporate,PRUDENT
-JB Chem & Pharma,JBCHEPHARM
-IOL Chem & Pharma,IOLCP
-Cholamandalam Fin.,CHOLAHLDNG
-TV18 Broad (Amalgam),TV18BRDCST
+Oracle Finl. Service,OFSS.NS
+JBF Industries,JBFIND.NS
+Polylink Polymers(I),531454.BO
+High EnergyBatteries,HIGHENE.NS
+Panasonic Energy Ind,PANASONICIN.NS
+Future Consumer,FCONSUMER.NS
+Goodricke Group,500166.BO
+Kaira Can Co,504840.BO
+Mah & Mah Finl. Serv,M&MFIN.NS
+Shriram City Union,SHRIRAMFIN.NS
+Ujjivan Fin-Amalgama,UJJIVANSFB.NS
+Chola Invest & Fin.,CHOLAFIN.NS
+Motilal Oswal Fin,MOTILALOFS.NS
+SREI Infra Fin,SREINFRA.NS
+Akanksha Power&Infra,AKANKSHA.NS
+Australian Premium,APSE.NS
+Garden Reach Ship,GRSE.NS
+Solar Industries Ind,SOLARINDS.NS
+Aashka Hospitals,543345.BO
+Krishna Inst.Medi,KIMS.NS
+Srikalahasthi Pipes,ELECTCAST.NS
+Eco Recycling,ECORECO.NS
+Hariyana Ship Break,520121.BO
+Indag Rubber,INDAG.NS
+General Ins. Corpn.,GICRE.NS
+ICICI Lombard Gen.,ICICIGI.NS
+Fert Chem Travancore,FACT.NS
+JP Associate,JPASSOCIAT.NS
+Mangalore Amalgamati,MCFL.NS
+Shree Pushkar Chem,SHREEPUSHK.NS
+India Power Corpn.,INDIAPOWER.NS
+Dixon Tech. (India),DIXON.NS
+Ashapuri Gold Ornam.,ASHAPURI.NS
+Eighty Jewellers,543505.BO
+Koura Fine Diamond,544139.BO
+PNGS Gargi Fashion,543709.BO
+Utssav CZ Gold Jewel,CZGOLD.NS
+Nippon LifeInd.Asset,NAM-INDIA.NS
+Prudent Corporate,PRUDENT.NS
+Cholamandalam Fin.,CHOLAHLDNG.NS
+Enkei Wheels (India),ENKEIWHEEL.NS
+Rane Brake Amalgamat,RANEBRAKE.NS
+ZF Commercial Vehic.,ZFCVINDIA.NS
+Adani Ports &Special,ADANIPORTS.NS
+Allcargo Gati-Amalga,ALLCARGO.NS
+SpiceJet,SPICEJET.NS
+AVP Infracon,AVPINFRA.NS
+Agarwal Indl. Corpn.,AGARIND.NS
+Coromandel Engg. Co,515085.BO
+Effwa Infra&Research,EFFWA.NS
+Ganesh Infraworld,GANESHINFRA.NS
+Generic Eng. & Const,GENCON.NS
+IL&FS Engg. & Const.,IL&FSENGG.NS
+K2 Infragen,K2INFRAGEN.NS
+Kay Cee Energy&Infra,KAYCEE.NS
+Lakshya Powertech,LAKSHYA.NS
+RBM Infracon,RBMINFRA.NS
+Rajesh Power Serv.,RAJESHPOWER.NS
+Reliance Indl. Infra,RIIL.NS
+Sterling and Wilson,SNEW.NS
+Galaxy Bearings,526073.BO
+IOL Chem & Pharma,IOLCP.NS
+JB Chem & Pharma,JBCHEPHARM.NS
+Piramal Ent - Amalga,PEL.NS
+Amal,AMAL.NS
+Bombay Oxygen Inv.,509470.BO
+Deepak Fert & Petro,DEEPAKFERT.NS
+Genpharmasec,531502.BO
+Hind Organic Chem,HOCL.NS
+Indian Toners & Dev.,523584.BO
+Kisan Mouldings,KISAN.NS
+Kkalpana lnds. (I),532652.BO
+Multibase India,526731.BO
+Polson,526622.BO
+Prima Plastics,530589.BO
+Punjab Chem. & Corp.,PUNJABCHEM.NS
+RDB Rasayans,533608.BO
+Shri Jagdamba Polymr,512480.BO
+TGV SRACC,TGVSRACC.NS
+Tanfac Industries,506854.BO
+Empire Industries,509525.BO
+Insilco,500211.BO
+Saint-Gobain Sekurit,515043.BO
+Triveni Glass,502281.BO
+Foseco Crucible (I),FOSECOIND.NS
+Uniply Inds,UNIPLY.NS
+AGS Transact Tech,AGSTRA.NS
+Vishal Fabrics,VISHAL.NS
+Milkfood,507621.BO
+APM Industries,523537.BO
+Amarjothi Spg. Mills,521097.BO
+GTN Industries,GTNIND.NS
+Gangotri Textile,GANGOTRI.NS
+Gem Spinners,521113.BO
+Kandagiri Spg Mills,521108.BO
+PBM Polytex,539353.BO
+Patspin India,PATSPINWG.NS
+Prag Bosimi Synthet.,500337.BO
+Sambandam Spg. Mills,521240.BO
+Shree Rajasthan Syn.,502963.BO
+Surat Trade & Merc.,512634.BO
+Suryavanshi Spg Mill,514144.BO
+Winsome Textile Ind.,514394.BO
+Waterbase,WATERBASE.NS
+Zeal Aqua,539963.BO
+Sanghi Ind. Amalgam,SANGHIIND.NS
+Udaipur Cem. Amalgam,UDAICEMENT.NS
+Ballarpur Industries,BILT.NS
+Camex,524440.BO
+Dynamic Industries,524164.BO
+Crompt.Greaves Cons.,CROMPTON.NS
+Forbes & Company,502865.BO
+Reliance Capital,RELCAPITAL.NS
+Eros Internatl.Media,EROSMEDIA.NS
+TV18 Broad (Amalgam),TV18BRDCST.NS
+Cochin Minerals&Rut.,513353.BO
+Hardcastle&Waud Mfg.,500174.BO
+Hind Fluorocarbons,524238.BO
+Indokem,504092.BO
+Jyoti Resins&Adhesiv,JYOTIRESIN.NS
+Kemistar Corporation,531163.BO
+Narmada Gelatines,524194.BO
+Vikas WSP,524110.BO
+Yash Chemex,540080.BO
