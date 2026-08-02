@@ -39,9 +39,16 @@ INDEX_HTML_PATH = os.path.join(BASE, "index.html")
 NSE_EQUITY_LIST_URL = "https://archives.nseindia.com/content/equities/EQUITY_L.csv"
 FUZZY_MATCH_THRESHOLD = 0.72  # below this, we don't trust the match -> needs_review
 
-TRADING_DAYS = {
-    "1D": 1, "1W": 5, "1M": 21, "3M": 63,
-    "6M": 126, "1YR": 252, "2YR": 504, "3YR": 756, "5YR": 1260,
+CALENDAR_OFFSETS = {
+    "1D": pd.DateOffset(days=1),
+    "1W": pd.DateOffset(weeks=1),
+    "1M": pd.DateOffset(months=1),
+    "3M": pd.DateOffset(months=3),
+    "6M": pd.DateOffset(months=6),
+    "1YR": pd.DateOffset(years=1),
+    "2YR": pd.DateOffset(years=2),
+    "3YR": pd.DateOffset(years=3),
+    "5YR": pd.DateOffset(years=5),
 }
 
 
@@ -102,7 +109,10 @@ def best_fuzzy_match(target_clean, nse_df):
 
 def resolve_ticker(name, cache, overrides, nse_df):
     if name in overrides:
-        return overrides[name]
+        val = overrides[name].strip()
+        # user can specify an exchange suffix explicitly (e.g. "500166.BO" for
+        # a BSE-only listing); otherwise assume NSE and add ".NS" for them
+        return val if "." in val else f"{val}.NS"
     if name in cache and cache[name] != "UNRESOLVED":
         return cache[name]
 
@@ -117,19 +127,24 @@ def resolve_ticker(name, cache, overrides, nse_df):
 
 
 def compute_returns(closes):
-    """closes: pandas Series of daily close prices, most recent last."""
+    """closes: pandas Series of daily close prices, indexed by date, most recent last."""
     if closes.empty:
         return {}
+    closes = closes.sort_index()
+    latest_date = closes.index[-1]
     latest = closes.iloc[-1]
     out = {}
-    for label, days in TRADING_DAYS.items():
-        if len(closes) > days:
-            past = closes.iloc[-1 - days]
-            out[label] = round((latest / past) - 1, 4) if past else None
-        else:
+    for label, offset in CALENDAR_OFFSETS.items():
+        target_date = latest_date - offset
+        # only look back as far as we actually have history for
+        if target_date < closes.index[0]:
             out[label] = None
-    window = closes.iloc[-252:] if len(closes) >= 252 else closes
-    high_52w = window.max()
+            continue
+        past = closes.asof(target_date)  # last known price at/before that date
+        out[label] = round((latest / past) - 1, 4) if pd.notna(past) and past else None
+    one_year_ago = latest_date - pd.DateOffset(years=1)
+    window = closes[closes.index >= one_year_ago]
+    high_52w = window.max() if not window.empty else closes.max()
     out["LTP VS 52W HIGH"] = round((latest / high_52w) - 1, 4) if high_52w else None
     return out
 
@@ -168,7 +183,7 @@ def main():
     # Step 2: batch-download 5 years of price history for everything resolved
     tickers = sorted(set(resolved.values()))
     print(f"Downloading price history for {len(tickers)} tickers...")
-    raw = yf.download(tickers, period="5y", group_by="ticker", auto_adjust=True, threads=True)
+    raw = yf.download(tickers, period="6y", group_by="ticker", auto_adjust=True, threads=True)
 
     # Step 3: compute returns per company, grouped by sector so we can also
     # build a weighted sector-summary row (IsIndex: true) ahead of each group,
@@ -197,7 +212,7 @@ def main():
                     returns = compute_returns(closes)
                 except Exception as e:
                     print(f"  skipping {c['name']} ({symbol}): {e}")
-            for label in list(TRADING_DAYS.keys()) + ["LTP VS 52W HIGH"]:
+            for label in list(CALENDAR_OFFSETS.keys()) + ["LTP VS 52W HIGH"]:
                 row[label] = returns.get(label)
             sector_rows.append(row)
 
@@ -207,7 +222,7 @@ def main():
             "Category": sector, "Company": sector, "Link": None,
             "IsIndex": True, "Weight": None,
         }
-        for label in list(TRADING_DAYS.keys()) + ["LTP VS 52W HIGH"]:
+        for label in list(CALENDAR_OFFSETS.keys()) + ["LTP VS 52W HIGH"]:
             num, den = 0.0, 0.0
             for c, r in zip(members, sector_rows):
                 v, w = r.get(label), c.get("weight") or 0
