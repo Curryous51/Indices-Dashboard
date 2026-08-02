@@ -22,8 +22,10 @@ import json
 import csv
 import os
 import re
-import time
+import io
+import difflib
 import pandas as pd
+import requests
 import yfinance as yf
 
 BASE = os.path.dirname(os.path.abspath(__file__))
@@ -33,6 +35,9 @@ OVERRIDES_PATH = os.path.join(BASE, "overrides.csv")
 NEEDS_REVIEW_PATH = os.path.join(BASE, "needs_review.csv")
 OUTPUT_JSON_PATH = os.path.join(BASE, "data", "dashboard_data.json")
 INDEX_HTML_PATH = os.path.join(BASE, "index.html")
+
+NSE_EQUITY_LIST_URL = "https://archives.nseindia.com/content/equities/EQUITY_L.csv"
+FUZZY_MATCH_THRESHOLD = 0.72  # below this, we don't trust the match -> needs_review
 
 TRADING_DAYS = {
     "1D": 1, "1W": 5, "1M": 21, "3M": 63,
@@ -57,46 +62,55 @@ def load_overrides():
     return overrides
 
 
-def guess_candidates(name):
-    """Generate a few plausible NSE ticker guesses for a company name."""
-    clean = re.sub(r"[^A-Za-z0-9& ]", "", name)
-    clean = re.sub(
-        r"\b(Ltd|Limited|Co|Company|India|Industries|Inds|Corp|Corporation|The)\b",
-        "", clean, flags=re.I,
-    ).strip()
-    words = clean.split()
-    candidates = []
-    if words:
-        candidates.append("".join(words).upper())          # e.g. HCLTECHNOLOGIES
-        candidates.append("".join(w[0] for w in words).upper())  # initials, e.g. HCL
-        if len(words) > 1:
-            candidates.append(words[0].upper())             # first word only
-    # de-dupe, keep order
-    seen = set()
-    out = []
-    for c in candidates:
-        if c and c not in seen:
-            seen.add(c)
-            out.append(c)
-    return out
+def clean_name(name):
+    """Strip legal-entity suffixes/punctuation so names compare cleanly."""
+    n = re.sub(r"[^A-Za-z0-9& ]", " ", name)
+    n = re.sub(
+        r"\b(Ltd|Limited|Co|Company|India|Industries|Inds|Corp|Corporation|The|Amalgamated|Amalgamat)\b",
+        "", n, flags=re.I,
+    )
+    return re.sub(r"\s+", " ", n).strip().upper()
 
 
-def resolve_ticker(name, cache, overrides):
+def fetch_nse_master_list():
+    """Download NSE's official symbol <-> company-name list once per run."""
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                      "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36",
+        "Accept": "text/csv,*/*",
+    }
+    session = requests.Session()
+    session.get("https://www.nseindia.com", headers=headers, timeout=15)  # sets cookies
+    resp = session.get(NSE_EQUITY_LIST_URL, headers=headers, timeout=15)
+    resp.raise_for_status()
+    df = pd.read_csv(io.StringIO(resp.text))
+    df.columns = [c.strip() for c in df.columns]
+    df["CLEAN_NAME"] = df["NAME OF COMPANY"].apply(clean_name)
+    return df
+
+
+def best_fuzzy_match(target_clean, nse_df):
+    """Return (symbol, score) for the closest company-name match, or (None, 0)."""
+    choices = nse_df["CLEAN_NAME"].tolist()
+    matches = difflib.get_close_matches(target_clean, choices, n=1, cutoff=FUZZY_MATCH_THRESHOLD)
+    if not matches:
+        return None, 0
+    row = nse_df[nse_df["CLEAN_NAME"] == matches[0]].iloc[0]
+    score = difflib.SequenceMatcher(None, target_clean, matches[0]).ratio()
+    return row["SYMBOL"], score
+
+
+def resolve_ticker(name, cache, overrides, nse_df):
     if name in overrides:
         return overrides[name]
     if name in cache and cache[name] != "UNRESOLVED":
         return cache[name]
 
-    for guess in guess_candidates(name):
-        symbol = f"{guess}.NS"
-        try:
-            hist = yf.Ticker(symbol).history(period="5d")
-            if not hist.empty:
-                cache[name] = symbol
-                return symbol
-        except Exception:
-            pass
-        time.sleep(0.1)  # be polite to Yahoo's endpoint
+    symbol, score = best_fuzzy_match(clean_name(name), nse_df)
+    if symbol:
+        full = f"{symbol}.NS"
+        cache[name] = full
+        return full
 
     cache[name] = "UNRESOLVED"
     return None
@@ -125,11 +139,15 @@ def main():
     cache = load_json(CACHE_PATH, {})
     overrides = load_overrides()
 
+    print("Downloading NSE official symbol list...")
+    nse_df = fetch_nse_master_list()
+    print(f"  loaded {len(nse_df)} listed companies from NSE")
+
     # Step 1: resolve tickers
     resolved = {}
     unresolved = []
     for c in companies:
-        symbol = resolve_ticker(c["name"], cache, overrides)
+        symbol = resolve_ticker(c["name"], cache, overrides, nse_df)
         if symbol:
             resolved[c["name"]] = symbol
         else:
