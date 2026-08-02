@@ -2,8 +2,9 @@ name: Update Dashboard Daily
 
 on:
   schedule:
+    # 11:00 UTC = 4:30 PM IST, Monday-Friday
     - cron: "0 11 * * 1-5"
-  workflow_dispatch: {}
+  workflow_dispatch: {}   # lets you trigger it manually from the Actions tab too
 
 permissions:
   contents: write
@@ -21,7 +22,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install yfinance pandas
+        run: pip install yfinance pandas requests
 
       - name: Run update script
         run: python update_dashboard.py
@@ -32,5 +33,4 @@ jobs:
           git config user.email "actions@github.com"
           git add index.html data/dashboard_data.json data/ticker_cache.json needs_review.csv 2>/dev/null || true
           git diff --staged --quiet || git commit -m "Daily data refresh"
-          git pull --rebase origin main
           git push
