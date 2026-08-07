@@ -126,6 +126,30 @@ def resolve_ticker(name, cache, overrides, nse_df):
     return None
 
 
+def compute_ema_crossovers(closes):
+    """
+    Returns {'Crossed50': 'up'|'down'|None, 'Crossed200': 'up'|'down'|None}
+    'up'   = price closed above the EMA today, having been at/below it yesterday
+    'down' = price closed below the EMA today, having been at/above it yesterday
+    None   = no crossover today (or not enough history to know)
+    """
+    out = {"Crossed50": None, "Crossed200": None}
+    if len(closes) < 3:
+        return out
+    closes = closes.sort_index()
+    for label, span in (("Crossed50", 50), ("Crossed200", 200)):
+        if len(closes) < span + 2:
+            continue  # not enough history for a meaningful EMA yet
+        ema = closes.ewm(span=span, adjust=False).mean()
+        today_px, yday_px = closes.iloc[-1], closes.iloc[-2]
+        today_ema, yday_ema = ema.iloc[-1], ema.iloc[-2]
+        if yday_px <= yday_ema and today_px > today_ema:
+            out[label] = "up"
+        elif yday_px >= yday_ema and today_px < today_ema:
+            out[label] = "down"
+    return out
+
+
 def compute_returns(closes):
     """closes: pandas Series of daily close prices, indexed by date, most recent last."""
     if closes.empty:
@@ -206,14 +230,18 @@ def main():
                 "Weight": c.get("weight"),
             }
             returns = {}
+            crossovers = {"Crossed50": None, "Crossed200": None}
             if symbol:
                 try:
                     closes = raw[symbol]["Close"].dropna()
                     returns = compute_returns(closes)
+                    crossovers = compute_ema_crossovers(closes)
                 except Exception as e:
                     print(f"  skipping {c['name']} ({symbol}): {e}")
             for label in list(CALENDAR_OFFSETS.keys()) + ["LTP VS 52W HIGH"]:
                 row[label] = returns.get(label)
+            row["Crossed50"] = crossovers["Crossed50"]
+            row["Crossed200"] = crossovers["Crossed200"]
             sector_rows.append(row)
 
         # weighted sector summary row (weight-normalized average of each
@@ -221,6 +249,7 @@ def main():
         summary = {
             "Category": sector, "Company": sector, "Link": None,
             "IsIndex": True, "Weight": None,
+            "Crossed50": None, "Crossed200": None,
         }
         for label in list(CALENDAR_OFFSETS.keys()) + ["LTP VS 52W HIGH"]:
             num, den = 0.0, 0.0
