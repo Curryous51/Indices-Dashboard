@@ -126,31 +126,37 @@ def resolve_ticker(name, cache, overrides, nse_df):
     return None
 
 
-def compute_ema_crossovers(closes):
+def compute_ma_crossovers(closes):
     """
-    Returns {'Crossed50': 'up'|'down'|None, 'Crossed200': 'up'|'down'|None}
-    'up'   = price closed above the EMA today, having been at/below it yesterday
-    'down' = price closed below the EMA today, having been at/above it yesterday
-    None   = no crossover today (or not enough history to know)
+    Returns Crossed50/Crossed200 (EMA-based) and CrossedSMA50/CrossedSMA200
+    (SMA-based), each 'up'|'down'|None for today's session.
+    'up'   = price closed above the average today, having been at/below it yesterday
+    'down' = price closed below the average today, having been at/above it yesterday
+    None   = no crossover today (or not enough history to trust the average yet)
     """
-    out = {"Crossed50": None, "Crossed200": None}
+    out = {"Crossed50": None, "Crossed200": None, "CrossedSMA50": None, "CrossedSMA200": None}
     if len(closes) < 3:
         return out
     closes = closes.sort_index()
     today_px, yday_px = closes.iloc[-1], closes.iloc[-2]
 
-    for label, span in (("Crossed50", 50), ("Crossed200", 200)):
-        # An EMA needs several multiples of its span before it's actually
-        # stabilized -- with too little history it's still heavily anchored
-        # to the first price in the window, producing an EMA line that
-        # doesn't match what a chart with full history would show.
+    configs = [
+        ("Crossed50", 50, "ema"), ("Crossed200", 200, "ema"),
+        ("CrossedSMA50", 50, "sma"), ("CrossedSMA200", 200, "sma"),
+    ]
+    for label, span, kind in configs:
+        # A moving average needs enough history before it's trustworthy.
+        # EMA in particular is still heavily anchored to the first price in
+        # the window until several multiples of its span have passed. SMA
+        # is exact from `span` rows onward, but we hold it to the same bar
+        # for consistency and to avoid noisy day-one-eligible signals.
         if len(closes) < span * 3:
             continue
-        ema = closes.ewm(span=span, adjust=False).mean()
-        today_ema, yday_ema = ema.iloc[-1], ema.iloc[-2]
-        if yday_px <= yday_ema and today_px > today_ema:
+        ma = closes.ewm(span=span, adjust=False).mean() if kind == "ema" else closes.rolling(span).mean()
+        today_ma, yday_ma = ma.iloc[-1], ma.iloc[-2]
+        if yday_px <= yday_ma and today_px > today_ma:
             out[label] = "up"
-        elif yday_px >= yday_ema and today_px < today_ema:
+        elif yday_px >= yday_ma and today_px < today_ma:
             out[label] = "down"
     return out
 
@@ -235,18 +241,20 @@ def main():
                 "Weight": c.get("weight"),
             }
             returns = {}
-            crossovers = {"Crossed50": None, "Crossed200": None}
+            crossovers = {"Crossed50": None, "Crossed200": None, "CrossedSMA50": None, "CrossedSMA200": None}
             if symbol:
                 try:
                     closes = raw[symbol]["Close"].dropna()
                     returns = compute_returns(closes)
-                    crossovers = compute_ema_crossovers(closes)
+                    crossovers = compute_ma_crossovers(closes)
                 except Exception as e:
                     print(f"  skipping {c['name']} ({symbol}): {e}")
             for label in list(CALENDAR_OFFSETS.keys()) + ["LTP VS 52W HIGH"]:
                 row[label] = returns.get(label)
             row["Crossed50"] = crossovers["Crossed50"]
             row["Crossed200"] = crossovers["Crossed200"]
+            row["CrossedSMA50"] = crossovers["CrossedSMA50"]
+            row["CrossedSMA200"] = crossovers["CrossedSMA200"]
             sector_rows.append(row)
 
         # weighted sector summary row (weight-normalized average of each
@@ -255,6 +263,7 @@ def main():
             "Category": sector, "Company": sector, "Link": None,
             "IsIndex": True, "Weight": None,
             "Crossed50": None, "Crossed200": None,
+            "CrossedSMA50": None, "CrossedSMA200": None,
         }
         for label in list(CALENDAR_OFFSETS.keys()) + ["LTP VS 52W HIGH"]:
             num, den = 0.0, 0.0
