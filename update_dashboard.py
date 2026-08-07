@@ -137,11 +137,16 @@ def compute_ema_crossovers(closes):
     if len(closes) < 3:
         return out
     closes = closes.sort_index()
+    today_px, yday_px = closes.iloc[-1], closes.iloc[-2]
+
     for label, span in (("Crossed50", 50), ("Crossed200", 200)):
-        if len(closes) < span + 2:
-            continue  # not enough history for a meaningful EMA yet
+        # An EMA needs several multiples of its span before it's actually
+        # stabilized -- with too little history it's still heavily anchored
+        # to the first price in the window, producing an EMA line that
+        # doesn't match what a chart with full history would show.
+        if len(closes) < span * 3:
+            continue
         ema = closes.ewm(span=span, adjust=False).mean()
-        today_px, yday_px = closes.iloc[-1], closes.iloc[-2]
         today_ema, yday_ema = ema.iloc[-1], ema.iloc[-2]
         if yday_px <= yday_ema and today_px > today_ema:
             out[label] = "up"
@@ -204,7 +209,7 @@ def main():
         print(f"{len(unresolved)} companies need manual review -> needs_review.csv")
         print("Fill in the NSE_Symbol column there, then move those rows into overrides.csv.")
 
-    # Step 2: batch-download 5 years of price history for everything resolved
+    # Step 2: batch-download price history for everything resolved.
     tickers = sorted(set(resolved.values()))
     print(f"Downloading price history for {len(tickers)} tickers...")
     raw = yf.download(tickers, period="6y", group_by="ticker", auto_adjust=True, threads=True)
