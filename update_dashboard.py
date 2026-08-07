@@ -126,6 +126,36 @@ def resolve_ticker(name, cache, overrides, nse_df):
     return None
 
 
+def compute_touch_signals(closes, lows):
+    """
+    A different signal from a crossover: today's LOW dipped below the
+    average, but the CLOSE still finished above it -- a same-day
+    dip-and-recover / support test, independent of yesterday's position.
+    Returns Touch50/Touch200 (EMA) and TouchSMA50/TouchSMA200 (SMA), each
+    True/False.
+    """
+    out = {"Touch50": False, "Touch200": False, "TouchSMA50": False, "TouchSMA200": False}
+    if len(closes) < 3:
+        return out
+    closes = closes.sort_index()
+    lows = lows.sort_index()
+    today_close = closes.iloc[-1]
+    today_low = lows.iloc[-1]
+
+    configs = [
+        ("Touch50", 50, "ema"), ("Touch200", 200, "ema"),
+        ("TouchSMA50", 50, "sma"), ("TouchSMA200", 200, "sma"),
+    ]
+    for label, span, kind in configs:
+        if len(closes) < span * 3:
+            continue
+        ma = closes.ewm(span=span, adjust=False).mean() if kind == "ema" else closes.rolling(span).mean()
+        today_ma = ma.iloc[-1]
+        if today_low < today_ma < today_close:
+            out[label] = True
+    return out
+
+
 def compute_ma_crossovers(closes):
     """
     Returns Crossed50/Crossed200 (EMA-based) and CrossedSMA50/CrossedSMA200
@@ -242,11 +272,14 @@ def main():
             }
             returns = {}
             crossovers = {"Crossed50": None, "Crossed200": None, "CrossedSMA50": None, "CrossedSMA200": None}
+            touches = {"Touch50": False, "Touch200": False, "TouchSMA50": False, "TouchSMA200": False}
             if symbol:
                 try:
-                    closes = raw[symbol]["Close"].dropna()
+                    sub = raw[symbol][["Close", "Low"]].dropna()
+                    closes = sub["Close"]
                     returns = compute_returns(closes)
                     crossovers = compute_ma_crossovers(closes)
+                    touches = compute_touch_signals(closes, sub["Low"])
                 except Exception as e:
                     print(f"  skipping {c['name']} ({symbol}): {e}")
             for label in list(CALENDAR_OFFSETS.keys()) + ["LTP VS 52W HIGH"]:
@@ -255,6 +288,10 @@ def main():
             row["Crossed200"] = crossovers["Crossed200"]
             row["CrossedSMA50"] = crossovers["CrossedSMA50"]
             row["CrossedSMA200"] = crossovers["CrossedSMA200"]
+            row["Touch50"] = touches["Touch50"]
+            row["Touch200"] = touches["Touch200"]
+            row["TouchSMA50"] = touches["TouchSMA50"]
+            row["TouchSMA200"] = touches["TouchSMA200"]
             sector_rows.append(row)
 
         # weighted sector summary row (weight-normalized average of each
@@ -264,6 +301,8 @@ def main():
             "IsIndex": True, "Weight": None,
             "Crossed50": None, "Crossed200": None,
             "CrossedSMA50": None, "CrossedSMA200": None,
+            "Touch50": False, "Touch200": False,
+            "TouchSMA50": False, "TouchSMA200": False,
         }
         for label in list(CALENDAR_OFFSETS.keys()) + ["LTP VS 52W HIGH"]:
             num, den = 0.0, 0.0
