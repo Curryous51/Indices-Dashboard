@@ -273,6 +273,7 @@ def main():
             returns = {}
             crossovers = {"Crossed50": None, "Crossed200": None, "CrossedSMA50": None, "CrossedSMA200": None}
             touches = {"Touch50": False, "Touch200": False, "TouchSMA50": False, "TouchSMA200": False}
+            last_close = None
             if symbol:
                 try:
                     sub = raw[symbol][["Close", "Low"]].dropna()
@@ -280,8 +281,11 @@ def main():
                     returns = compute_returns(closes)
                     crossovers = compute_ma_crossovers(closes)
                     touches = compute_touch_signals(closes, sub["Low"])
+                    if not closes.empty:
+                        last_close = round(float(closes.iloc[-1]), 2)
                 except Exception as e:
                     print(f"  skipping {c['name']} ({symbol}): {e}")
+            row["Close"] = last_close
             for label in list(CALENDAR_OFFSETS.keys()) + ["LTP VS 52W HIGH"]:
                 row[label] = returns.get(label)
             row["Crossed50"] = crossovers["Crossed50"]
@@ -298,7 +302,7 @@ def main():
         # column across the companies that had a value for it)
         summary = {
             "Category": sector, "Company": sector, "Link": None,
-            "IsIndex": True, "Weight": None,
+            "IsIndex": True, "Weight": None, "Close": None,
             "Crossed50": None, "Crossed200": None,
             "CrossedSMA50": None, "CrossedSMA200": None,
             "Touch50": False, "Touch200": False,
