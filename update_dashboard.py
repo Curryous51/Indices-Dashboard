@@ -33,6 +33,7 @@ COMPANIES_PATH = os.path.join(BASE, "data", "companies.json")
 CACHE_PATH = os.path.join(BASE, "data", "ticker_cache.json")
 OVERRIDES_PATH = os.path.join(BASE, "overrides.csv")
 NEEDS_REVIEW_PATH = os.path.join(BASE, "needs_review.csv")
+NEW_LISTINGS_PATH = os.path.join(BASE, "new_listings_detected.csv")
 OUTPUT_JSON_PATH = os.path.join(BASE, "data", "dashboard_data.json")
 INDEX_HTML_PATH = os.path.join(BASE, "index.html")
 
@@ -214,6 +215,36 @@ def compute_returns(closes):
     return out
 
 
+def detect_new_listings(nse_df, companies, days_back=270):
+    """
+    Find NSE-listed companies that aren't in companies.json yet, restricted
+    to ones listed recently -- this deliberately does NOT try to pull in
+    every stock NSE has ever listed (that would balloon the dataset with
+    names outside your curated universe). It's aimed specifically at
+    catching new IPOs you haven't added yet.
+    """
+    if "DATE OF LISTING" not in nse_df.columns:
+        return []
+
+    existing_clean = {clean_name(c["name"]) for c in companies}
+    cutoff = pd.Timestamp.today() - pd.Timedelta(days=days_back)
+
+    df = nse_df.copy()
+    df["LISTING_DATE"] = pd.to_datetime(df["DATE OF LISTING"], errors="coerce")
+    recent = df[df["LISTING_DATE"] >= cutoff]
+
+    new_ones = []
+    for _, row in recent.iterrows():
+        if row["CLEAN_NAME"] not in existing_clean:
+            new_ones.append({
+                "name": str(row["NAME OF COMPANY"]).strip(),
+                "sector": "New Listings - Uncategorized",
+                "link": None,
+                "weight": 0.0001,
+            })
+    return new_ones
+
+
 def main():
     companies = load_json(COMPANIES_PATH, [])
     cache = load_json(CACHE_PATH, {})
@@ -222,6 +253,20 @@ def main():
     print("Downloading NSE official symbol list...")
     nse_df = fetch_nse_master_list()
     print(f"  loaded {len(nse_df)} listed companies from NSE")
+
+    new_listings = detect_new_listings(nse_df, companies)
+    if new_listings:
+        print(f"  found {len(new_listings)} new/recently-listed companies not yet in companies.json")
+        companies.extend(new_listings)
+        with open(COMPANIES_PATH, "w", encoding="utf-8") as f:
+            json.dump(companies, f, indent=1)
+        with open(NEW_LISTINGS_PATH, "w", newline="", encoding="utf-8") as f:
+            w = csv.writer(f)
+            w.writerow(["Company", "Added under sector"])
+            for c in new_listings:
+                w.writerow([c["name"], c["sector"]])
+        print("  added to companies.json under 'New Listings - Uncategorized'")
+        print("  see new_listings_detected.csv -- move these into a proper sector when you get a chance")
 
     # Step 1: resolve tickers
     resolved = {}
