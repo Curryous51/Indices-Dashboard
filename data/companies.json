@@ -7752,9 +7752,1911 @@
   "weight": 0.1011
  },
  {
- "name": "Atlanta Electricals Ltd",
+  "name": "Atlanta Electricals Ltd",
   "sector": "TJI Transformers",
   "link": "https://www.tijorifinance.com/company/atlanta-electricals-ltd/",
   "weight": 0.0
+ },
+ {
+  "name": "3B Blackbio Dx Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Aarnav Fashions Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Aastha Spintex Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Abans Enterprises Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "ABM Knowledgeware Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Automobile Corporation of Goa Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "ACS Technologies Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Addi Industries Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Advait Energy Transitions Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Advik Capital Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Artemis Electricals and Projects Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Aequs Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Amir Chand Jagdish Kumar (Exports) Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Allcargo Global Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "AK Capital Services Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Alfred Herbert India Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Algoquant Fintech Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Alpine Texworld Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Alufluoride Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Amagi Media Labs Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Amarjothi Spinning Mills Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Ambalal Sarabhai Enterprises Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Andrew Yule & Company Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Annapurna Swadisht Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Ansal Buildwell Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Apoorva Leasing Finance and Investment Company Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "ARCL Organics Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Ardee Industries Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Arihant Foundations & Housing Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Aryaman Financial Services Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Ashika Global Securities Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Asian Tea & Exports Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Assam Entrade Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Austin Engineering Company  Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Avance Technologies Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Axtel Industries Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Aye Finance Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Azad India Mobility Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Bajaj Steel Industries Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Batliboi Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "BCPL Railway Infrastructure Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Beekay Steel Industries Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Benares Hotels Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Bharat Coking Coal Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Birla Precision Technologies Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Behari Lal Engineering Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Balmer Lawrie Investments Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Blue Cloud Softech Solutions Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "BN Agrochem Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "B & A Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Bonlon Industries Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Bharat Parenterals Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Brahmaputra Infrastructure Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Bright Brothers Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Bhilwara Technical Textiles Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Shankara Buildpro Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Ceinsys Tech Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Confidence Futuristic Energetech Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "CG Vak Software & Exports Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Clean Max Enviro Energy Solutions Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Caliber Mining and Logistics Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Central Mine Planning & Design Institute Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "CMR Green Technologies Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "John Cockerill India Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Comfort Intech Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Competent Automobiles Company Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Waterways Leisure Tourism Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "CORONA Remedies Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Cravatex Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Cressanda Railway Solutions Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "CSM Technologies Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "DCM Shriram International Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Deccan Gold Mines Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Deep Polymers Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Dhabriya Polywood Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Dhatre Udyog Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Dhoot Transmission Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Disa India Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Dr Agarwals Eye Hospital Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "DCM Shriram Fine Chemicals Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "East West Freight Carriers Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "EBIX Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "EKI Energy Services Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Elantas Beck India Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "EL CID Investments Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Elitecon International Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Elpro International Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Empower India Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Fedders Holding Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Fractal Analytics Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Fredun Pharmaceuticals Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Frontier Springs Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Gaudium IVF and Women Health Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Globe International Carriers Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "GKB Ophthalmics Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Gujarat Kidney And Super Speciality Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Gujarat Natural Resources Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Gradiente Infotainment Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Grand Oak Canyons Distillery Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Grauer & Weil India Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Graviss Hospitality Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "GSP Crop Science Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Gyftr Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Halder Venture Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Hampton Sky Realty Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Hawkins Cookers Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Hazoor Multi Projects Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "HB Estate Developers Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "HB Portfolio Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Hexagon Nutrition Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Hindustan Adhesives Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Hind Aluminium Industries Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Hariyana Ship Breakers Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "ICICI Prudential Asset Management Company Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "INDO-MIM Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Industrial & Prudential Investment Company Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Innovision Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Investment & Precision Castings Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "IP Rings Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "I S T Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "ITL Industries Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "The Indian Wood Products Company Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Jaykay Enterprises Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Jenburkt Pharmaceuticals Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Juniper Green Energy Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Jyoti Resins & Adhesives Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Kamanwala Housing Construction Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Kanchi Karpooram Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Kanco Tea & Industries Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Kennametal India Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Kiran Vyapar Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Kirloskar Ferrous Industries Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "OnEMI Technology Solutions Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "KJMC Financial Services Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Kilburn Engineering Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "K M C Speciality Hospitals (India) Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Knack Packaging Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "KN Agri Resources Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Kothari Industrial Corporation Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Kotyark Industries Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Kovai Medical Center & Hospital Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Kwality Pharmaceuticals Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Krishna Defence And Allied Industries Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "KSE Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "KSH International Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "KSR Footwear Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Kusumgar Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Kwality Wall's (India) Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Ladderup Finance Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Lancer Container Lines Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Laser Power & Infra Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Lohia Corp Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "LEAP India Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Lee & Nee Softwares Exports Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Le Merite Exports Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "LKP Securities Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Lotus Chocolate Company Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Madhav Infra Projects Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Mafatlal Industries Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Majestic Auto Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Makers Laboratories Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Manbro Industries Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Manipal Health Enterprises Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Mac Charles India Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Medi Caps Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Meesho Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Menon Pistons Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Mercantile Ventures Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Mercury Ev-Tech Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Metroglobal Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Meghna Infracon Infrastructure Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Milky Mist Dairy Food Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Minal Industries Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "M.K. Exim (India) Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Media Matrix Worldwide Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Modi Naturals Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Mohite Industries Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Molbio Diagnostics Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "MPDL Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Mangalam Seeds Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Mukesh Babu Financial Services Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "MV Electrosystems Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Mysore Petro Chemicals Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "National Standard (India) Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Neelamalai Agro Industries Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Nephrocare Health Services Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Nicco Parks & Resorts Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Nimbus Projects Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Nirlon Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Novartis India Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "NTC Industries Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Odyssey Corporation Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Omnitech Engineering Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Om Power Transmission Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "One Global Service Provider Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Onix Solar Energy Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Optimus Finance Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Oriental Rail Infrastructure Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Pacific Industries Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Panchmahal Steel Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Panorama Studios International Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Park Medi World Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Parnax Lab Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Permanent Magnets Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Phoenix International Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Pioneer Investcorp Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Paul Merchants Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "PNGS Reva Diamond Jewellery Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "POCL Enterprises Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Polyspin Exports Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Powerica Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Pradeep Metals Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Premco Global Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Prismx Global Ventures Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "QMS Medical Allied Services Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Quint Digital Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Advit Jewels Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "RIR Power Electronics Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "RMC Switchgears Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "RDB Real Estate Constructions Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "RRIL Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "RSD Finance Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Rajputana Stainless Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "RTS Power Corporation Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Rudra Global Infra Products Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "SAB Industries Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Shalibhadra Finance Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Sai Capital Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Sai Parenterals Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Sambandam Spinning Mills Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Shree Ajit Pulp & Paper Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Sayaji Industries Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "SBI Funds Management Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Scan Steels Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "SEDEMAC Mechatronics Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Shanti Educational Initiatives Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "SGL Resources Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Shree Ganesh Remedies Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Shadowfax Technologies Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Shardul Securities Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Shri Bajrang Alliance Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Shervani Industrial Syndicate Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Shilp Gravures Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Sharat Industries Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Shiprocket Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Shiva Global Agro Industries Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Shiva Cement Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Shraddha Prime Projects Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Shri Krishna Devcon Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Shri Jagdamba Polymers Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Shukra Pharmaceuticals Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Sicagen India Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Superior Industrial Enterprises Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Sika Interplant Systems Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Simplex Realty Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Singer India Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "SKF India (Industrial) Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Sonal Mercantile Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "SPEL Semiconductor Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Sri KPR Industries Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Shree Ram Twistex Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Steel Strips Infrastructures Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Sudeep Pharma Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Sumedha Fiscal Services Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Sunil Healthcare Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Sunrakshakk Industries India Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Sunshield Chemicals Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Super Tannery Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Suryalata Spinning Mills Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "S V Global Mill Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Swaraj Suiting Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Swarnsarita Jewels India Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Swiss Military Consumer Goods Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Taal Tech Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Tamboli Industries Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Taneja Aerospace & Aviation Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "TCC Concept Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Technocraft Ventures Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "TechNVision Ventures Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Terai Tea Company Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "TGV Sraac Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Thacker & Company Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Thakkers Developers Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Timex Group India Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Toyam Sports Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Transcorp International Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Triton Valves Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Turtlemint Fintech Solutions Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Tuticorin Alkali Chemicals & Fertilizers Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Ultramarine & Pigments Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "U P Hotels Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Vedanta Aluminium Metal Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Shri Vasuprada Plantations Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "VEDAVAAG Systems Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Vedanta Power Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Veljan Denison Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Vibrant Global Capital Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Vidya Wires Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Vijay Solvex Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Virat Industries Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Virtual Global Education Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Vedanta Iron and Steel Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Vital Chemtech Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Vivo Bio Tech Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Virtuoso Optoelectronics Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Vedanta Oil and Gas Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Voith Paper Fabrics India Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "VTM Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Wakefit Innovations Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Wardwizard Innovations & Mobility Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Welspun Specialty Solutions Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "WH Brady & Company Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "WPIL Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Xtranet Technologies Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Yogi Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "ZF Steering Gear (India) Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Saraswati Commercial India Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
  }
 ]
