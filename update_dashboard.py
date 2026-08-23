@@ -224,6 +224,9 @@ def detect_new_listings(nse_df, companies, days_back=270):
     catching new IPOs you haven't added yet.
     """
     if "DATE OF LISTING" not in nse_df.columns:
+        print("  [new-listing check] NSE's file didn't include a 'DATE OF LISTING' "
+              f"column this run (columns seen: {list(nse_df.columns)}). "
+              "Can't determine what's recently listed -- skipping this check.")
         return []
 
     existing_clean = {clean_name(c["name"]) for c in companies}
@@ -232,6 +235,8 @@ def detect_new_listings(nse_df, companies, days_back=270):
     df = nse_df.copy()
     df["LISTING_DATE"] = pd.to_datetime(df["DATE OF LISTING"], errors="coerce")
     recent = df[df["LISTING_DATE"] >= cutoff]
+    print(f"  [new-listing check] {len(recent)} NSE companies listed in the last "
+          f"{days_back} days (cutoff: {cutoff.date()})")
 
     new_ones = []
     for _, row in recent.iterrows():
@@ -242,6 +247,7 @@ def detect_new_listings(nse_df, companies, days_back=270):
                 "link": None,
                 "weight": 0.0001,
             })
+    print(f"  [new-listing check] {len(new_ones)} of those aren't in companies.json yet")
     return new_ones
 
 
