@@ -9658,5 +9658,29 @@
   "sector": "NBFC - Non Deposit Taking",
   "link": "https://www.tijorifinance.com/company/saraswati-commercial-india-ltd/",
   "weight": 0.0001
+ },
+ {
+  "name": "Horizon Industrial Parks Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Lalithaa Jewellery Mart Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Shankesh Jewellers Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Sunshine Pictures Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
  }
 ]
