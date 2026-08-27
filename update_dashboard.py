@@ -192,6 +192,12 @@ def compute_ma_crossovers(closes):
     return out
 
 
+STALENESS_TOLERANCE_DAYS = {
+    "1D": 4, "1W": 10, "1M": 45, "3M": 100,
+    "6M": 200, "1YR": 380, "2YR": 750, "3YR": 1120, "5YR": 1850,
+}
+
+
 def compute_returns(closes):
     """closes: pandas Series of daily close prices, indexed by date, most recent last."""
     if closes.empty:
@@ -206,7 +212,21 @@ def compute_returns(closes):
         if target_date < closes.index[0]:
             out[label] = None
             continue
-        past = closes.asof(target_date)  # last known price at/before that date
+        eligible = closes.index[closes.index <= target_date]
+        if len(eligible) == 0:
+            out[label] = None
+            continue
+        past_idx = eligible[-1]
+        # Guard against illiquid stocks: if the nearest available price is
+        # much older than the target date (stock didn't trade for a while),
+        # that gap isn't really "1D" (or whatever label) anymore -- treat
+        # it as unavailable rather than silently mislabeling a multi-day
+        # gap as a same-day move.
+        staleness = (target_date - past_idx).days
+        if staleness > STALENESS_TOLERANCE_DAYS[label]:
+            out[label] = None
+            continue
+        past = closes.loc[past_idx]
         out[label] = round((latest / past) - 1, 4) if pd.notna(past) and past else None
     one_year_ago = latest_date - pd.DateOffset(years=1)
     window = closes[closes.index >= one_year_ago]
