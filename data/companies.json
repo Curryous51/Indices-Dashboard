@@ -10132,5 +10132,17 @@
   "sector": "New Listings - Uncategorized",
   "link": null,
   "weight": 0.0001
+ },
+ {
+  "name": "BLS Polymers Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "SFC Environmental Technologies Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
  }
 ]
