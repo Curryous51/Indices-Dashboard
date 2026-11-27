@@ -10246,5 +10246,17 @@
   "sector": "New Listings - Uncategorized",
   "link": null,
   "weight": 0.0001
+ },
+ {
+  "name": "HEG Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
+ },
+ {
+  "name": "Mahanadi Coalfields Limited",
+  "sector": "New Listings - Uncategorized",
+  "link": null,
+  "weight": 0.0001
  }
 ]
